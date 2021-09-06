@@ -637,7 +637,7 @@ class MainActivity : SimpleActivity() {
         if (showTabs and TAB_FILES != 0) {
             fragments.add(items_fragment)
         }
-  
+
         if (showTabs and TAB_RECENT_FILES != 0) {
             fragments.add(recents_fragment)
         }
