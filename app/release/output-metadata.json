@@ -4,15 +4,15 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "com.simplemobiletools.filemanager.pro",
+  "applicationId": "com.Arad.aFile",
   "variantName": "release",
   "elements": [
     {
       "type": "SINGLE",
       "filters": [],
-      "versionCode": 108,
-      "versionName": "6.9.4",
-      "outputFile": "file-manager-release.apk"
+      "versionCode": 10,
+      "versionName": "1.0",
+      "outputFile": "app-release.apk"
     }
   ]
 }

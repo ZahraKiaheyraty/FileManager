@@ -2,48 +2,48 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
-def keystorePropertiesFile = rootProject.file("keystore.properties")
-def keystoreProperties = new Properties()
-if (keystorePropertiesFile.exists()) {
-    keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
-}
+//def keystorePropertiesFile = rootProject.file("keystore.properties")
+//def keystoreProperties = new Properties()
+//if (keystorePropertiesFile.exists()) {
+//    keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+//}
 
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.3"
 
     defaultConfig {
-        applicationId "com.simplemobiletools.filemanager.pro"
+        applicationId "com.Arad.aFile"
         minSdkVersion 21
         targetSdkVersion 29
-        versionCode 108
-        versionName "6.9.4"
+        versionCode 10
+        versionName "1.0"
         multiDexEnabled true
-        setProperty("archivesBaseName", "file-manager")
+       // setProperty("archivesBaseName", "file-manager")
         vectorDrawables.useSupportLibrary = true
     }
 
-    signingConfigs {
-        if (keystorePropertiesFile.exists()) {
-            release {
-                keyAlias keystoreProperties['keyAlias']
-                keyPassword keystoreProperties['keyPassword']
-                storeFile file(keystoreProperties['storeFile'])
-                storePassword keystoreProperties['storePassword']
-            }
-        }
-    }
+//    signingConfigs {
+//        if (keystorePropertiesFile.exists()) {
+//            release {
+//                keyAlias keystoreProperties['keyAlias']
+//                keyPassword keystoreProperties['keyPassword']
+//                storeFile file(keystoreProperties['storeFile'])
+//                storePassword keystoreProperties['storePassword']
+//            }
+//        }
+//    }
 
     buildTypes {
-        debug {
-            applicationIdSuffix ".debug"
-        }
+//        debug {
+//            applicationIdSuffix ".debug"
+//        }
         release {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            if (keystorePropertiesFile.exists()) {
-                signingConfig signingConfigs.release
-            }
+//            if (keystorePropertiesFile.exists()) {
+//                signingConfig signingConfigs.release
+//            }
         }
     }
 
