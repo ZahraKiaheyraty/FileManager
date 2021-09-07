@@ -355,7 +355,7 @@ class CustomizationActivity : BaseSimpleActivity() {
         customization_primary_color.setFillWithStroke(curPrimaryColor, curBackgroundColor, cornerRadius)
         customization_accent_color.setFillWithStroke(curAccentColor, curBackgroundColor, cornerRadius)
         customization_background_color.setFillWithStroke(curBackgroundColor, curBackgroundColor, cornerRadius)
-        customization_app_icon_color.setFillWithStroke(curAppIconColor, curBackgroundColor, cornerRadius)
+//        customization_app_icon_color.setFillWithStroke(curAppIconColor, curBackgroundColor, cornerRadius)
         customization_navigation_bar_color.setFillWithStroke(curNavigationBarColor, curBackgroundColor, cornerRadius)
 
         customization_text_color_holder.setOnClickListener { pickTextColor() }
@@ -366,16 +366,16 @@ class CustomizationActivity : BaseSimpleActivity() {
         handleAccentColorLayout()
         customization_navigation_bar_color_holder.setOnClickListener { pickNavigationBarColor() }
         apply_to_all_holder.setOnClickListener { applyToAll() }
-        customization_app_icon_color_holder.setOnClickListener {
-            if (baseConfig.wasAppIconCustomizationWarningShown) {
-                pickAppIconColor()
-            } else {
-                ConfirmationDialog(this, "", R.string.app_icon_color_warning, R.string.ok, 0) {
-                    baseConfig.wasAppIconCustomizationWarningShown = true
-                    pickAppIconColor()
-                }
-            }
-        }
+//        customization_app_icon_color_holder.setOnClickListener {
+//            if (baseConfig.wasAppIconCustomizationWarningShown) {
+//                pickAppIconColor()
+//            } else {
+//                ConfirmationDialog(this, "", R.string.app_icon_color_warning, R.string.ok, 0) {
+//                    baseConfig.wasAppIconCustomizationWarningShown = true
+//                    pickAppIconColor()
+//                }
+//            }
+//        }
     }
 
     private fun hasColorChanged(old: Int, new: Int) = Math.abs(old - new) > 1
