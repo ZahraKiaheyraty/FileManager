@@ -180,7 +180,7 @@ class MainActivity : SimpleActivity() {
             R.id.increase_column_count -> increaseColumnCount()
             R.id.reduce_column_count -> reduceColumnCount()
             R.id.settings -> startActivity(Intent(applicationContext, SettingsActivity::class.java))
-            R.id.about -> launchAbout()
+//            R.id.about -> launchAbout()
             else -> return super.onOptionsItemSelected(item)
         }
         return true
@@ -525,20 +525,20 @@ class MainActivity : SimpleActivity() {
         }
     }
 
-    private fun launchAbout() {
-        val licenses = LICENSE_GLIDE or LICENSE_PATTERN or LICENSE_REPRINT or LICENSE_GESTURE_VIEWS
-
-        val faqItems = arrayListOf(
-            FAQItem(R.string.faq_3_title_commons, R.string.faq_3_text_commons),
-            FAQItem(R.string.faq_2_title_commons, R.string.faq_2_text_commons),
-            FAQItem(R.string.faq_6_title_commons, R.string.faq_6_text_commons),
-            FAQItem(R.string.faq_7_title_commons, R.string.faq_7_text_commons),
-            FAQItem(R.string.faq_9_title_commons, R.string.faq_9_text_commons),
-            FAQItem(R.string.faq_10_title_commons, R.string.faq_10_text_commons)
-        )
-
-        startAboutActivity(R.string.app_name, licenses, BuildConfig.VERSION_NAME, faqItems, true)
-    }
+//    private fun launchAbout() {
+//        val licenses = LICENSE_GLIDE or LICENSE_PATTERN or LICENSE_REPRINT or LICENSE_GESTURE_VIEWS
+//
+//        val faqItems = arrayListOf(
+//            FAQItem(R.string.faq_3_title_commons, R.string.faq_3_text_commons),
+//            FAQItem(R.string.faq_2_title_commons, R.string.faq_2_text_commons),
+//            FAQItem(R.string.faq_6_title_commons, R.string.faq_6_text_commons),
+//            FAQItem(R.string.faq_7_title_commons, R.string.faq_7_text_commons),
+//            FAQItem(R.string.faq_9_title_commons, R.string.faq_9_text_commons),
+//            FAQItem(R.string.faq_10_title_commons, R.string.faq_10_text_commons)
+//        )
+//
+//        startAboutActivity(R.string.app_name, licenses, BuildConfig.VERSION_NAME, faqItems, true)
+//    }
 
     override fun onBackPressed() {
         if (getCurrentFragment() !is ItemsFragment) {

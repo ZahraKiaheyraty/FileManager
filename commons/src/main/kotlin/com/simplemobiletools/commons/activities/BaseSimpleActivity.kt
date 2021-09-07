@@ -319,13 +319,13 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         }
     }
 
-    fun handleCustomizeColorsClick() {
-        if (isOrWasThankYouInstalled()) {
-            startCustomizationActivity()
-        } else {
-            launchPurchaseThankYouIntent()
-        }
-    }
+//    fun handleCustomizeColorsClick() {
+//        if (isOrWasThankYouInstalled()) {
+//            startCustomizationActivity()
+//        } else {
+//            launchPurchaseThankYouIntent()
+//        }
+//    }
 
     @RequiresApi(Build.VERSION_CODES.O)
     fun launchCustomizeNotificationsIntent() {
